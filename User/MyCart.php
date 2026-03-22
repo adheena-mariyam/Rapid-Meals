@@ -326,7 +326,9 @@ session_start();
 					  $_SESSION["bid"] = $row["booking_id"];
 					  
 					  $upQry2="update tbl_booking set delivery_time='".$time."' where booking_id='". $_SESSION["bid"]."'";
-					  if($con->query($upQry2));
+					  if($con->query($upQry2)) {
+					      // delivery time saved successfully
+					  }
 					  ?>
 					  <script>
 						 window.location="Payment.php";
