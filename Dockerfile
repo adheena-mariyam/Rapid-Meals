@@ -3,6 +3,9 @@
 # Enable mod_rewrite for Apache
 RUN a2enmod rewrite
 
+# Install MySQLi extension
+RUN docker-php-ext-install mysqli
+
 # Set working directory
 WORKDIR /var/www/html
 
